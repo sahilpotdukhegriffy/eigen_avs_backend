@@ -8,11 +8,11 @@ import { OrderBook } from './orderbook/orderbook.entity';
   imports: [
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: 'localhost',
+      host: '34.100.133.166',
       port: 3306,
       username: 'root',
-      password: 'Sahil@744',
-      database: 'mydb',
+      password: `V'DxEx7V+|H0lK#T`,
+      database: 'griffy',
       entities: [__dirname + '/**/*.entity{.ts,.js}', OrderBook],
       synchronize: true,
     }),
