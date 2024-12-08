@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { UsersModule } from './users/users.module';
 import { OrderbookModule } from './orderbook/orderbook.module';
+import { OrderBook } from './orderbook/orderbook.entity';
 
 @Module({
   imports: [
@@ -12,7 +13,7 @@ import { OrderbookModule } from './orderbook/orderbook.module';
       username: 'root',
       password: 'Sahil@744',
       database: 'mydb',
-      entities: [__dirname + '/**/*.entity{.ts,.js}'],
+      entities: [__dirname + '/**/*.entity{.ts,.js}', OrderBook],
       synchronize: true,
     }),
     UsersModule,
